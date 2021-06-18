@@ -25,3 +25,23 @@ int min(int x[], int n){
       m=x[i];
   return m;
 }
+
+int mode(int x[], int n){
+
+  int c[n],k=0;
+  for(int i=0;i<n;i++)
+    c[i]=0;
+  for(int i=0;i<n;i++)
+    for(int j=i;j<n;j++)
+    {
+      if(x[i]=x[j])
+        c[i]++;
+    }
+  int m=INT_MIN;
+  for(int i=0;i<n;i++)
+    if (c[i]>m){
+      m=c[i];
+      k++;
+    }
+  return x[k-1];
+}
