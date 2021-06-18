@@ -65,7 +65,6 @@ int factors(int n, int a[]){
       }
   }
   return j;
-  for(int i=0;i<j;i++)
 }
 
 int prime(int i){
